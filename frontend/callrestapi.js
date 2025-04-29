@@ -1,5 +1,7 @@
 // URL de la API
-var url = "http://localhost:3360/api/paintings";
+var url = "https://minecraft-restapi.onrender.com/api/paintings";
+// var url = "http://localhost:3360/api/paintings";
+
 
 $(document).ready(function() {
     console.log("Frontend is ready");
