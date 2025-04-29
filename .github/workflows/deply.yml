@@ -2,7 +2,7 @@ name: Deploy minecraft-api
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 jobs:
   deploy-api:
