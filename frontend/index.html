@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Minecraft Paintings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/frontend/callrestapi.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Minecraft Paintings</h1>
+      <p class="subtitle">Coleccion de cuadros de Minecraft</p>
+    </header>
+
+    <div class="form-container">
+      <h2>Pintura</h2>
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="name">Titulo:</label>
+          <input type="text" id="name" placeholder="Nombre de la pintura">
+        </div>
+        
+        <div class="form-group">
+          <label for="artist">Artista:</label>
+          <input type="text" id="artist" placeholder="Nombre del artista">
+        </div>
+
+        <div class="form-group">
+            <label for="image_url">URL de la pintura (Imagen):</label>
+            <input type="text" id="image_url" placeholder="https://ejemplo.com/imagen.png">
+          </div>
+
+        <div class="form-action">
+          <button id="postPaintingButton" class="btn btn-success">
+            <i class="fas fa-plus-circle"></i> Añadir pintura
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="paintings-section">
+      <div class="section-header">
+        <h2>Museo</h2>
+        <button id="refreshPaintingsButton" class="btn btn-primary">
+          <i class="fas fa-sync-alt"></i> Actualizar
+        </button>
+      </div>
+      <div id="paintings-container" class="paintings-grid"></div>
+    </div>
+
+    <div id="edit-panel" class="edit-panel">
+      <div class="edit-header">
+        <h3>Editar Pintura</h3>
+        <button id="closeEditPanel" class="btn-icon">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="edit-form">
+        <div class="form-group">
+          <label for="edit-name">Titulo:</label>
+          <input type="text" id="edit-name">
+        </div>
+        <div class="form-group">
+            <label for="edit-artist">Artista:</label>
+            <input type="text" id="edit-artist">
+          </div>
+        <div class="form-group">
+          <label for="edit-image-url">URL de pintura (Imagen):</label>
+          <input type="text" id="edit-image-url">
+        </div>
+        
+        <div class="edit-actions">
+          <button id="updatePaintingButton" class="btn btn-warning">
+            <i class="fas fa-save"></i> Actualizar
+          </button>
+          <button id="deletePaintingButton" class="btn btn-danger">
+            <i class="fas fa-trash-alt"></i> Eliminar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

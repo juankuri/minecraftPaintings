@@ -1,0 +1,176 @@
+/* Contenedor general */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; 
+  box-sizing: border-box;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 30px; 
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Estilo del formulario de creación */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* Ajustar el formulario a columna */
+.form-grid {
+  display: flex;
+  flex-direction: column;  /* Usamos columna para que los campos estén debajo de las etiquetas */
+  gap: 15px;
+}
+
+/* Estilo de cada grupo del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;  /* Hace que la etiqueta esté encima del campo */
+}
+
+label {
+  margin-bottom: 5px;  /* Espacio entre la etiqueta y el campo */
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;  /* Asegura que el campo ocupe todo el ancho disponible */
+  box-sizing: border-box;  /* Para que el padding no afecte el tamaño total */
+}
+
+/* Pinturas */
+.paintings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.painting-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.painting-card:hover {
+  transform: scale(1.05);
+}
+
+.painting-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.painting-info {
+  padding: 15px;
+}
+
+.painting-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.painting-artist {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Panel de edición */
+.edit-panel {
+  display: none; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #f9f9f9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto; 
+}
+
+#edit-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Estilo de los botones */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.refresh-btn {
+  margin-left: 10px;
+}
+
+hr.divider {
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
